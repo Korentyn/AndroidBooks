@@ -1,8 +1,9 @@
 package fr.istef.cw1719.androidbooks.models;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Book {
+public class Book implements Serializable{
     public String titre;
     public String auteur;
     public Date datePublication;
@@ -10,7 +11,7 @@ public class Book {
     public String urlImage;
     public Integer id;
 
-    public Book(String titre, String auteur, Date datePublication, Integer nbPages, String urlImage, Integer id) {
+    public Book (String titre, String auteur, Date datePublication, Integer nbPages, String urlImage, Integer id) {
         this.titre = titre;
         this.auteur = auteur;
         this.datePublication = datePublication;
@@ -66,4 +67,6 @@ public class Book {
     public void setId(Integer id) {
         this.id = id;
     }
+
+
 }
